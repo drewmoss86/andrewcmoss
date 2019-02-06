@@ -1,0 +1,109 @@
+@charset "utf-8";
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+    height: 100%;
+    margin: 0; padding: 0; border: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background-image: url("astronomy.jpg");
+    background-size: cover;
+    display: block;
+    height: 100%;
+}
+
+.sm_icons {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sm_icons h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-family: Righteous, cursive, sans-serif, serif;
+    font-size: 3.0em;
+    text-align: center;
+}
+
+.sm_icons ul {
+    padding-left: 0;
+}
+
+.sm_icons li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+    padding: 0 10px 0 10px;
+
+}
+
+.sm_icons a i {
+    color: white;
+    font-size: 2.0em;
+}
+
+.sm_icons a:hover i {
+    display: inline-block;
+    color: darken(rgb(130, 185, 248), 10%);
+}
+
+.links {
+    text-align: center;
+}
+
+article blockquote {
+    display: block;
+}
+
+body {
+    height: 100%;
+    margin: 0px auto auto auto;
+    background-color: darkcyan;
+    font-family: 'Source Sans Pro', sans-serif, serif;
+}
+
+//navbar
+nav {
+    display: table;
+    width: 100%;
+    background-color: black; 
+}
+
+nav ul {
+    display: table-row;
+    text-align: justify;
+    // flex-wrap: nowrap;
+    padding: 0;
+}
+
+nav ul li {
+    display: table-cell;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li:hover {
+    background-color: rgb(51, 145, 233);
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    clear: both;    
+    background-color: black; 
+    font-family: 'Source Sans Pro', sans-serif, serif;
+    color: white;
+    text-align: center;
+}
