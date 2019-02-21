@@ -1,0 +1,28 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <title>Andrew's Log</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+
+        </head>
+
+        <body>
+            <div class="blog">
+                <h1>Andrew's Log</h1>
+                <%= link_to 'New Post', new_post_path %>
+                <table>
+                    <% @posts.each do |post| %>
+                        <tr>
+                            <td class="postTitle"> <%= link_to post.title, post_path(post) %> 
+                            </td>
+                            <td> <%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+                        </tr>
+                        <tr>
+                            <td> <em>posted on <%= ActiveSupport::TimeZone.new('America/Los_Angeles').local_to_utc(Time.at(post.updated_at)).strftime("%B %e, %Y at %I:%M %p")  %></em> </td>                            
+                        </tr>
+                    <% end %>
+                </table>
+            </div>
+        </body>
+    </html>

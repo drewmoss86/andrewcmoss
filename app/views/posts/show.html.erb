@@ -1,0 +1,15 @@
+<p>
+    <strong>Title:</strong>
+    <%= @post.title %>
+</p>
+
+<p>
+    <strong>Post: </strong>
+    <%= @post.post %>
+</p>
+<p class="postDate">
+    <em> <strong>updated on <%= ActiveSupport::TimeZone.new('Pacific Time (US & Canada)').local_to_utc(Time.at(@post.updated_at)).strftime("%B %e, %Y at %I:%M %p") %></strong> </em>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

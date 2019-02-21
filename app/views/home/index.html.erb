@@ -10,7 +10,6 @@
     </head>
     <body>
         <header>
-            <%# <img src="astronomy-beautiful-clouds-355465.jpg" alt="Astronomy Clouds"/> %>
             <div class="sm_icons">
                 <h1>Andrew Moss</h1>
                 <ul>
@@ -33,14 +32,14 @@
                     </div>
                 </ul>
             </div>
-                <%# <i class="far fa-caret-square-down"></i> %>
         </header>
         <nav>
             <ul>
                 <li> <a href="#"> <strong>Home</strong> </a> </li>
                 <li> <a href="#About"> <strong>About</strong> </a> </li>
                 <li> <a href="#"> <strong>Resume</strong> </a> </li>
-                <li> <a href="#"><strong>Contact</strong> </a> </li>
+                <li> <strong><%= link_to 'Blog', controller: 'posts' %> </strong> </a> </li>                
+                <li> <a href="#"> <strong>Contact</strong> </a> </li>
             </ul>
         </nav>
         <article id="About">
@@ -56,6 +55,7 @@
                 </p>
             </blockquote>
         </article>
+
         <footer>&copy; Andrew Moss</footer>
     </body>
 
